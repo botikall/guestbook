@@ -15,7 +15,7 @@ mvn clean jetty:run
 
 http://localhost:8080/guestbook
 
-##База даних
+## База даних
 
 СУБД: H2
 
@@ -26,14 +26,14 @@ JDBC URL:
 jdbc:h2:file:./data/guestbook
 
 
-##Файл БД:
+## Файл БД:
 
 ./data/guestbook.mv.db
 
 
 База створюється автоматично при першому додаванні коментаря.
 
-##Ендпоїнти
+## Ендпоїнти
 Отримати всі коментарі
 GET /guestbook/comments
 
@@ -49,7 +49,7 @@ GET /guestbook/comments
   }
 ]
 
-##Додати коментар
+## Додати коментар
 POST /guestbook/comments
 
 
@@ -58,13 +58,13 @@ Content-Type:
 application/x-www-form-urlencoded
 
 
-##Параметри:
+## Параметри:
 
 author — обовʼязковий, ≤ 64 символи
 
 text — обовʼязковий, ≤ 1000 символів
 
-##Відповіді:
+## Відповіді:
 
 204 No Content — успішно
 
@@ -72,7 +72,7 @@ text — обовʼязковий, ≤ 1000 символів
 
 500 Internal Server Error — помилка БД
 
-##Валідація
+## Валідація
 
 author і text не можуть бути порожніми
 
@@ -82,16 +82,16 @@ author: 64
 
 text: 1000
 
-##Логування
+## Логування
 
 SLF4J + Logback
 
 Логується POST-запит і створення нового коментаря
 
-##Збірка
+## Збірка
 mvn clean package
 
 
-##WAR-файл:
+## WAR-файл:
 
 target/guestbook.war
