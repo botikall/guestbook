@@ -11,9 +11,6 @@
 
 ## Запуск
 mvn clean jetty:run
-## Застосунок буде доступний за адресою:
-
-http://localhost:8080/guestbook
 
 ## База даних
 
