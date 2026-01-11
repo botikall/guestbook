@@ -15,11 +15,9 @@
         <module>web</module>
     </modules>
 
-    <!-- Головне: цільова Java -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
-        <!-- На випадок старих плагінів: -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
@@ -41,7 +39,10 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!-- Новіший compiler plugin, щоб 'release=17' точно працював -->
+                <plugin>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
